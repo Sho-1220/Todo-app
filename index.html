@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo-app</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="card mt-5">
+          <div class="card-body p-4">
+            <h2 class="text-center mb-4">Todo管理</h2>
+            
+            <div class="mb-3">
+              <label class="form-label">TODO</label>
+              <input type="text" class="form-control" id="todo" placeholder="やることを入力">
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label">優先度</label>
+              <select class="form-select">
+                <option>低</option>
+                <option selected>普</option>
+                <option>高</option>
+              </select>
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label">期日</label>
+              <input type="date" class="form-control">
+            </div>
+            
+            <button id="submit" class="btn btn-primary w-100 mb-3">登録</button>
+            
+            <div class="mb-3">
+              <label for="searchInput" class="form-label"> タスク検索</label>
+              <input type="text" id="searchInput" class="form-control" placeholder="タスク名で検索...">
+            </div>
+            
+            <table class="table table-striped" id="result">
+              <thead>
+                <tr>
+                  <th>TODO</th>
+                  <th>優先度</th>
+                  <th>期日</th>
+                  <th>完了</th>
+                  <th>削除</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
