@@ -66,6 +66,12 @@ function updateDisplay(items = todoItems) {
     rows.forEach((row, index) => {
     if (index !== 0) row.remove();
     });
+
+    if (!items || items.length === 0) {
+        alert("タスクがありません");
+        return;
+    }
+    
     items.forEach(item => createTableRow(item));
 }
 
@@ -114,5 +120,6 @@ searchInput.addEventListener('input', function(e) {
 });
 
 updateDisplay();
+
 
 
