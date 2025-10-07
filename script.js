@@ -62,8 +62,10 @@ submit.addEventListener("click", () => {
 });
 
 function updateDisplay(items = todoItems) {
-    const rows = table.querySelectorAll('tr:not(:first-child)');
-    rows.forEach(row => row.remove());
+    const rows = table.querySelectorAll('tr');
+    rows.forEach((row, index) => {
+    if (index !== 0) row.remove();
+    });
     items.forEach(item => createTableRow(item));
 }
 
@@ -112,4 +114,5 @@ searchInput.addEventListener('input', function(e) {
 });
 
 updateDisplay();
+
 
